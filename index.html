@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Marek Hrivňák</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
     <script src="https://kit.fontawesome.com/5b6300fe6f.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -15,12 +16,16 @@
           <div class="left-nav">
             <a href="#hero"><img src="./images/logo.png" alt="logo" /></a>
           </div>
-          <div class="right-nav">
-            <a class="active" href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
+          <div class="right-nav" id="navigation-items">
+            <a class="navigation-item" href="#about">About</a>
+            <a class="navigation-item" href="#work">Work</a>
+            <a class="navigation-item" href="#experience">Experience</a>
+            <a class="navigation-item" href="#contact">Contact</a>
           </div>
+          <div class="hamburger">
+            <span id="openHam">&#9776;</span>
+            <span id="closeHam">&#x2716;</span>
+        </div>
         </div>
         <section id="hero" class="hero">
           <div class="hero-text">
