@@ -12,11 +12,12 @@ const hamburgerEvent = (navigation, close, open) => {
 const navigationEvent = () => {
   navigationItems.forEach((item) => {
     item.addEventListener("click", () => {
-      if (closeHam.style.display === "block") {
-        navigationItemsContainer.style.display = "none";
-        closeHam.style.display = "none";
-        openHam.style.display = "block";
-      }
+        if (closeHam.style.display === "block"){
+            navigationItemsContainer.style.display = "none";
+            closeHam.style.display = "none";
+            openHam.style.display = "block";
+        }
+
     });
   });
 };
@@ -38,8 +39,8 @@ closeHam.addEventListener("click", () =>
 navigationEvent();
 window.addEventListener("resize", setRightNavDisplay);
 
-document.addEventListener("DOMContentLoaded", function () {
-  var aboutSection = document.getElementById("about");
+document.addEventListener('DOMContentLoaded', function () {
+  var aboutSection = document.getElementById('about');
 
   // Function to change opacity when the about section is in view
   function changeOpacity() {
@@ -52,17 +53,15 @@ document.addEventListener("DOMContentLoaded", function () {
     if (scrollPosition >= aboutSectionPosition - offset) {
       // Change the opacity of your element here
       // For example, assuming you have an element with ID "yourElement"
-      document.getElementById("topnav").style.backgroundColor =
-        "rgba(10, 25, 47, 1)";
+      document.getElementById('topnav').style.backgroundColor ='rgba(10, 25, 47, 1)';
     } else {
       // Reset the opacity if not in the about section
-      document.getElementById("topnav").style.backgroundColor =
-        "rgba(10, 25, 47, 0.1)";
+      document.getElementById('topnav').style.backgroundColor = 'rgba(10, 25, 47, 0.1)';
     }
   }
 
   // Attach the function to the scroll event
-  window.addEventListener("scroll", changeOpacity);
+  window.addEventListener('scroll', changeOpacity);
 
   // Call the function once to set the initial state
   changeOpacity();
@@ -71,112 +70,115 @@ document.addEventListener("DOMContentLoaded", function () {
 /* ---- particles.js config ---- */
 
 particlesJS("particles-js", {
-  particles: {
-    number: {
-      value: 80,
-      density: {
-        enable: true,
-        value_area: 800,
+  "particles": {
+      "number": {
+          "value": 80,
+          "density": {
+              "enable": true,
+              "value_area": 800
+          }
       },
-    },
-    color: {
-      value: "#ffffff",
-    },
-    shape: {
-      type: "circle",
-      stroke: {
-        width: 0,
-        color: "#000000",
+      "color": {
+          "value": "#ffffff"
       },
-      polygon: {
-        nb_sides: 5,
+      "shape": {
+          "type": "circle",
+          "stroke": {
+              "width": 0,
+              "color": "#000000"
+          },
+          "polygon": {
+              "nb_sides": 5
+          },
+          "image": {
+              "src": "img/github.svg",
+              "width": 100,
+              "height": 100
+          }
       },
-      image: {
-        src: "img/github.svg",
-        width: 100,
-        height: 100,
+      "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+          }
       },
-    },
-    opacity: {
-      value: 0.5,
-      random: false,
-      anim: {
-        enable: false,
-        speed: 1,
-        opacity_min: 0.1,
-        sync: false,
+      "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+              "enable": false,
+              "speed": 40,
+              "size_min": 0.1,
+              "sync": false
+          }
       },
-    },
-    size: {
-      value: 3,
-      random: true,
-      anim: {
-        enable: false,
-        speed: 40,
-        size_min: 0.1,
-        sync: false,
+      "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
       },
-    },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#ffffff",
-      opacity: 0.4,
-      width: 1,
-    },
-    move: {
-      enable: true,
-      speed: 6,
-      direction: "none",
-      random: false,
-      straight: false,
-      out_mode: "out",
-      bounce: false,
-      attract: {
-        enable: false,
-        rotateX: 600,
-        rotateY: 1200,
-      },
-    },
+      "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+          }
+      }
   },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onhover: {
-        enable: true,
-        mode: "repulse",
+  "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+          "onhover": {
+              "enable": true,
+              "mode": "repulse"
+          },
+          "onclick": {
+              "enable": true,
+              "mode": "push"
+          },
+          "resize": true
       },
-      onclick: {
-        enable: true,
-        mode: "push",
-      },
-      resize: true,
-    },
-    modes: {
-      grab: {
-        distance: 400,
-        line_linked: {
-          opacity: 1,
-        },
-      },
-      bubble: {
-        distance: 400,
-        size: 40,
-        duration: 2,
-        opacity: 8,
-        speed: 3,
-      },
-      repulse: {
-        distance: 200,
-        duration: 0.4,
-      },
-      push: {
-        particles_nb: 4,
-      },
-      remove: {
-        particles_nb: 2,
-      },
-    },
+      "modes": {
+          "grab": {
+              "distance": 400,
+              "line_linked": {
+                  "opacity": 1
+              }
+          },
+          "bubble": {
+              "distance": 400,
+              "size": 40,
+              "duration": 2,
+              "opacity": 8,
+              "speed": 3
+          },
+          "repulse": {
+              "distance": 200,
+              "duration": 0.4
+          },
+          "push": {
+              "particles_nb": 4
+          },
+          "remove": {
+              "particles_nb": 2
+          }
+      }
   },
-  retina_detect: true,
+  "retina_detect": true
 });
+
+
+

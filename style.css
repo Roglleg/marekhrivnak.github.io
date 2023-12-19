@@ -2,6 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
 /* ---- particles.js container ---- */
 
 #particles-js {
@@ -213,16 +222,21 @@ a {
 }
 
 .work .skill {
-  width: 200px;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 40px;
+  margin: 50px;
+  text-align: center;
+}
+
+.skill-description{
+  width: 300p;
 }
 
 .work .skill img {
-  width: 200px;
+  width: 300px;
 }
 
 .work h1 {
@@ -405,6 +419,9 @@ a {
     padding-left: 50px;
     padding-right: 50px;
   }
+  .work .skill {
+    margin: 30px;
+  }
 }
 
 @media screen and (max-width: 1400px) and (min-width: 1200px) {
@@ -412,11 +429,19 @@ a {
     padding-left: 150px;
     padding-right: 150px;
   }
+  .work {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 @media screen and (min-width: 1400px) {
   .section {
     padding-left: 300px;
     padding-right: 300px;
+  }
+  .work {
+    padding-left: 150px;
+    padding-right: 150px;
   }
 }
