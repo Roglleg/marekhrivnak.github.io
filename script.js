@@ -54,9 +54,12 @@ document.addEventListener('DOMContentLoaded', function () {
       // Change the opacity of your element here
       // For example, assuming you have an element with ID "yourElement"
       document.getElementById('topnav').style.backgroundColor ='rgba(10, 25, 47, 1)';
+      document.getElementById('topnav').style.borderBottom = '1px solid azure';
     } else {
       // Reset the opacity if not in the about section
       document.getElementById('topnav').style.backgroundColor = 'rgba(10, 25, 47, 0.1)';
+      document.getElementById('topnav').style.borderBottom = 'rgba(10, 25, 47, 1)';
+      document.getElementById('topnav').style.transition = '0.5s';
     }
   }
 
