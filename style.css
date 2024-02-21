@@ -234,12 +234,11 @@ a {
 }
 
 .work .skill {
-  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin: 20px;
   text-align: center;
 }
 
@@ -249,7 +248,7 @@ a {
 }
 
 .skill-description {
-  width: 300px;
+  width: 330px;
 }
 
 .work .skill img {
@@ -402,7 +401,7 @@ footer #linkedin,
   }
 }
 
-@media screen and (max-width: 800px) and (min-width: 600px) {
+@media screen and (max-width: 800px) {
   .section {
     padding-left: 30px;
     padding-right: 30px;
@@ -453,6 +452,10 @@ footer #linkedin,
   .contact-cols {
     flex-direction: column;
   }
+
+  .work .skill {
+    margin: 0px;
+  }
 }
 
 @media screen and (max-width: 1000px) and (min-width: 800px) {
@@ -477,15 +480,15 @@ footer #linkedin,
   .contact-cols {
     flex-direction: column;
   }
+  .work .skill {
+    margin: 10px;
+  }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 1000px) {
   .section {
     padding-left: 50px;
     padding-right: 50px;
-  }
-  .work .skill {
-    margin: 30px;
   }
 }
 
