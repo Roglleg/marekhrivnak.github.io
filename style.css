@@ -456,6 +456,13 @@ footer #linkedin,
   .work .skill {
     margin: 0px;
   }
+
+  .experience .experience-fields {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: normal;
+  }
 }
 
 @media screen and (max-width: 1000px) and (min-width: 800px) {
@@ -482,6 +489,13 @@ footer #linkedin,
   }
   .work .skill {
     margin: 10px;
+  }
+
+  .experience .experience-fields {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: normal;
   }
 }
 
